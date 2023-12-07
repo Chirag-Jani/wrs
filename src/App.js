@@ -1,13 +1,11 @@
-import { Typography } from "@mui/material";
 import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="App">
-      <Typography component={"h3"} variant="h3">
-        Hello World
-      </Typography>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 

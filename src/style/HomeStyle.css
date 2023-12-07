@@ -1,0 +1,59 @@
+.top_home {
+  background-image: url("../resources/homepageBanner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.top_home_title {
+  font-family: "CaviarDreams-Bold";
+  color: "rgba(255, 255, 255, 1)";
+}
+
+.firstLetter {
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to right,
+    rgba(246, 139, 89, 1),
+    rgba(169, 16, 20, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.ai_powered {
+  font-size: 50px;
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to right,
+    rgba(0, 162, 213, 1),
+    rgba(0, 79, 197, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+}
+
+.realtor_solutions {
+  font-size: 50px;
+  font-family: "CaviarDreams-Regular";
+  background: linear-gradient(
+    to right,
+    rgba(246, 139, 89, 1),
+    rgba(169, 16, 20, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  font-weight: 400;
+}
+
+.ai_home {
+  background-image: url("../resources/aiImage.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
