@@ -1,8 +1,13 @@
 .top_home {
   background-image: url("../resources/homepageBanner.jpg");
   background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-position: center top -100px; /* Skip 100px from the top of the image */
+  height: fit-content;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .top_home_title {
@@ -22,6 +27,33 @@
   background-clip: text;
 }
 
+.what_we_do {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  background-color: rgb(209, 209, 209);
+  background-image: url("../resources/handCity.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: fit-content;
+  position: relative;
+  background-size: 147%;
+}
+.realtor_text {
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to right,
+    rgba(246, 139, 89, 1),
+    rgba(169, 16, 20, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+}
 .ai_powered {
   font-size: 50px;
   font-family: "CaviarDreams-Bold";
@@ -51,8 +83,48 @@
   font-weight: 400;
 }
 
-.ai_home {
+.how_we_do {
   background-image: url("../resources/aiImage.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  background-color: rgb(209, 209, 209);
+  padding: 0 50px;
+}
+
+.how_we_do_ai {
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to right,
+    rgba(226, 107, 71, 1),
+    rgba(180, 33, 30, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.wrs_hwd {
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to right,
+    rgba(216, 91, 62, 1),
+    rgba(191, 51, 40, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.wrs_temp {
+  background-image: url("../resources/wrs_temp.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
