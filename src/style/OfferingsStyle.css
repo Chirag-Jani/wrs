@@ -1,0 +1,7 @@
+.offerings_banner {
+  background-image: url("../resources/wrs_temp.png");
+  background-size: cover;
+  background-position: center top -100px; /* Skip 100px from the top of the image */
+  height: fit-content;
+  min-height: 90vh;
+}

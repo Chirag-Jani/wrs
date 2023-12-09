@@ -13,9 +13,16 @@
   display: flex;
   justify-content: space-evenly;
   width: 60%;
+}
+
+.ele {
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
   font-family: "CaviarDreams-Bold";
   background: linear-gradient(
-    to bottom,
+    to right,
     rgba(246, 140, 89, 1),
     rgba(168, 15, 20, 1)
   );
@@ -24,8 +31,13 @@
   background-clip: text;
 }
 
-.ele {
-  font-size: 25px;
-  font-weight: bold;
-  cursor: pointer;
+.active {
+  background: linear-gradient(
+    to right,
+    rgba(1, 162, 213, 1),
+    rgba(1, 108, 203, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
