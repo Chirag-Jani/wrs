@@ -43,8 +43,6 @@ const Offerings = ({ setSelectedMenu }) => {
       desc: "Welcome to World Realtor Solutions, where success is personalized and powered by cutting-edge AI technology. From expert training to AI-driven social media mastery, branding, and call center excellence, we've got your real estate journey covered. Elevate your online presence with predictive analytics, stand out with a unique brand sculpted by AI insights, and ensure every client interaction is top-notch. Ready to redefine real estate success with the fusion of expertise and AI innovation ? Let's get started.",
     },
   ];
-  const gradientBackground =
-    "linear-gradient(180deg, #DB6041 0%, #BF3328 100%)";
 
   const path = useLocation().pathname;
   useEffect(() => {
@@ -53,55 +51,13 @@ const Offerings = ({ setSelectedMenu }) => {
 
   return (
     <>
-      <Box
-        className="offerings_banner"
-        sx={{
-          position: "relative",
-        }}
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: "10%",
-            right: "10%",
-            textAlign: "center",
-          }}
-        >
-          <Typography
-            sx={{
-              fontSize: "70px",
-              fontFamily: "sans-serif",
-              fontWeight: 700,
-            }}
-          >
-            <span
-              className="firstLetter"
-              style={{
-                fontSize: "70px",
-                fontFamily: "sans-serif",
-                fontWeight: 700,
-              }}
-            >
-              O
-            </span>
-            fferings
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "50px",
-              fontFamily: "sans-serif",
-              fontWeight: 700,
-            }}
-          >
-            on your palm!
-          </Typography>
-        </Box>
-      </Box>
+      <Box className="offerings_banner"></Box>
       <Box
         sx={{
           backgroundColor: "rgb(23,23,23)",
           color: "white",
           paddingBottom: "300px",
+          paddingTop: "100px",
         }}
       >
         {whatWeDoInfo?.map((item, index) => {
@@ -111,19 +67,11 @@ const Offerings = ({ setSelectedMenu }) => {
                 sx={{
                   textAlign: "center",
                   padding: "30px",
-                  fontSize: "30px",
+                  fontSize: "50px",
                   fontWeight: "700",
                 }}
               >
-                <span
-                  className="realtor_text"
-                  style={{
-                    fontWeight: 700,
-                  }}
-                >
-                  Realtor
-                </span>{" "}
-                {item.title}
+                <span className="realtor_text">Realtor</span> {item.title}
               </Typography>
               <Box
                 key={index}
@@ -136,8 +84,14 @@ const Offerings = ({ setSelectedMenu }) => {
                   alignItems: "center",
                 }}
               >
-                {index % 2 === 0 ? (
-                  <>
+                {index % 2 !== 0 ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
                     <Box
                       sx={{
                         textAlign: "justify",
@@ -145,7 +99,12 @@ const Offerings = ({ setSelectedMenu }) => {
                         margin: "",
                       }}
                     >
-                      <Typography>
+                      <Typography
+                        sx={{
+                          color: "rgba(207, 207, 207, 1)",
+                          fontSize: "20px",
+                        }}
+                      >
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         {item.desc}
                       </Typography>
@@ -158,15 +117,19 @@ const Offerings = ({ setSelectedMenu }) => {
                         <Button
                           variant="contained"
                           sx={{
-                            background: gradientBackground,
+                            background:
+                              "linear-gradient(180deg, #DB6041 0%, #BF3328 100%)",
                             color: "white", // Set text color to be visible against the gradient background
                             "&:hover": {
-                              background: gradientBackground, // Adjust hover state if needed
+                              background:
+                                "linear-gradient(180deg, #DB6041 50%, #BF3328 100%)", // Adjust hover state if needed
                             },
                             borderRadius: "34.33px",
-                            width: "40%",
+                            padding: "10px 20px",
+                            width: "35%",
                             margin: "50px auto",
                             fontFamily: "CaviarDreams-Bold",
+                            fontSize: "23px",
                           }}
                         >
                           Explore
@@ -180,9 +143,15 @@ const Offerings = ({ setSelectedMenu }) => {
                         width: "30%",
                       }}
                     />
-                  </>
+                  </div>
                 ) : (
-                  <>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
                     <img
                       src={item.img}
                       alt=""
@@ -196,7 +165,12 @@ const Offerings = ({ setSelectedMenu }) => {
                         width: "50%",
                       }}
                     >
-                      <Typography>
+                      <Typography
+                        sx={{
+                          color: "rgba(207, 207, 207, 1)",
+                          fontSize: "20px",
+                        }}
+                      >
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         {item.desc}
                       </Typography>
@@ -207,24 +181,27 @@ const Offerings = ({ setSelectedMenu }) => {
                         }}
                       >
                         <Button
-                          variant="contained"
                           sx={{
-                            background: gradientBackground,
+                            background:
+                              "linear-gradient(180deg, #DB6041 0%, #BF3328 100%)",
                             color: "white", // Set text color to be visible against the gradient background
                             "&:hover": {
-                              background: gradientBackground, // Adjust hover state if needed
+                              background:
+                                "linear-gradient(180deg, #DB6041 50%, #BF3328 100%)", // Adjust hover state if needed
                             },
                             borderRadius: "34.33px",
-                            width: "40%",
+                            padding: "10px 20px",
+                            width: "35%",
                             margin: "50px auto",
                             fontFamily: "CaviarDreams-Bold",
+                            fontSize: "23px",
                           }}
                         >
                           Explore
                         </Button>
                       </Box>
                     </Box>
-                  </>
+                  </div>
                 )}
               </Box>
             </Box>

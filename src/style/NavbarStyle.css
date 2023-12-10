@@ -1,4 +1,6 @@
 .nav {
+  position: sticky;
+  top: 0;
   background-image: url("../resources/homepageBanner.jpg");
   background-size: cover;
   background-position: top center;
@@ -7,6 +9,11 @@
   align-items: center;
   height: 100px;
   font-size: 40px;
+  z-index: 100; /* Ensure the navbar appears above other content */
+}
+
+.transparent {
+  background: none;
 }
 
 .nav_elements {
@@ -22,7 +29,7 @@
   text-decoration: none;
   font-family: "CaviarDreams-Bold";
   background: linear-gradient(
-    to right,
+    to bottom,
     rgba(246, 140, 89, 1),
     rgba(168, 15, 20, 1)
   );
@@ -33,7 +40,7 @@
 
 .active {
   background: linear-gradient(
-    to right,
+    to bottom,
     rgba(1, 162, 213, 1),
     rgba(1, 108, 203, 1)
   );

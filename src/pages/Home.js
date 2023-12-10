@@ -11,10 +11,7 @@ import rt_coach from "../resources/rt_coach.svg";
 import rt_dm from "../resources/rt_dm.svg";
 import rt_web from "../resources/rt_web.svg";
 
-const YourComponent = () => {
-  const gradientBackground =
-    "linear-gradient(180deg, #DB6041 0%, #BF3328 100%)";
-
+const Home = () => {
   const whatWeDoInfo = [
     {
       img: rt_coach,
@@ -48,7 +45,7 @@ const YourComponent = () => {
           src={logo}
           alt=""
           style={{
-            height: "150px",
+            height: "200px",
             width: "auto",
             margin: "10px 0",
           }}
@@ -56,20 +53,19 @@ const YourComponent = () => {
         <Typography
           variant="h4"
           className="top_home_title"
-          sx={{ color: "white", textAlign: "center", fontSize: "50px" }}
+          sx={{ color: "white", textAlign: "center", fontSize: "70px" }}
         >
           <span className="firstLetter">W</span>orld{" "}
           <span className="firstLetter">R</span>ealtor{" "}
-          <span className="firstLetter">S</span>olution
+          <span className="firstLetter">S</span>olutions
         </Typography>
         <Typography
           sx={{
-            color: "white",
-            width: "60%",
+            color: "rgba(196, 196, 196, 1)",
             textAlign: "center",
-            fontSize: "25px",
+            fontSize: "35px",
             margin: "20px 0",
-            fontFamily: "sans-serif",
+            fontFamily: "DMSans-Regular",
           }}
         >
           We're not just a real estate service provider <br /> we're your
@@ -78,7 +74,7 @@ const YourComponent = () => {
           <span
             className="firstLetter"
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "DMSans-Regular",
             }}
           >
             {" "}
@@ -93,7 +89,7 @@ const YourComponent = () => {
           sx={{
             color: "rgba(30, 30, 30, 1)",
             fontSize: "50px",
-            fontFamily: "sans-serif",
+            fontFamily: "DMSans-Regular",
             fontWeight: "bold",
             paddingTop: "50px",
           }}
@@ -101,7 +97,7 @@ const YourComponent = () => {
           <span
             className="firstLetter"
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "DMSans-Regular",
               fontWeight: "bold",
             }}
           >
@@ -121,7 +117,7 @@ const YourComponent = () => {
           <Box
             sx={{
               display: "flex",
-              width: "70%",
+              width: "100%",
               flexWrap: "wrap",
               justifyContent: "center",
               alignItems: "center",
@@ -134,6 +130,7 @@ const YourComponent = () => {
                 sx={{
                   textAlign: "center",
                   margin: "30px",
+                  width: "300px",
                 }}
               >
                 <img
@@ -145,6 +142,8 @@ const YourComponent = () => {
                 />
                 <Typography
                   sx={{
+                    fontFamily: "DMSans-Regular",
+                    fontWeight: "500",
                     margin: "auto",
                     fontSize: "20px",
                   }}
@@ -242,9 +241,9 @@ const YourComponent = () => {
         <Typography
           variant="h4"
           sx={{
-            fontSize: "50px",
-            fontFamily: "sans-serif",
-            fontWeight: "bold",
+            fontSize: "70px",
+            fontFamily: "DMSans-Regular",
+            fontWeight: "700",
             marginTop: "50px",
             color: "rgba(255, 255, 255, 1)",
           }}
@@ -252,7 +251,7 @@ const YourComponent = () => {
           <span
             className="firstLetter"
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "DMSans-Regular",
               fontWeight: "bold",
             }}
           >
@@ -263,15 +262,16 @@ const YourComponent = () => {
         <Box
           sx={{
             textAlign: "left",
-            fontFamily: "sans-serif",
+            fontFamily: "DMSans-Regular",
+            fontWeight: "500",
             width: "100%",
             margin: "70px",
           }}
         >
           <Typography
             sx={{
-              color: "white",
-              fontSize: "25px",
+              color: "rgba(207, 207, 207, 1)",
+              fontSize: "33px",
             }}
           >
             Simple, With Cutting edge Technology known as
@@ -280,7 +280,8 @@ const YourComponent = () => {
             className="how_we_do_ai"
             sx={{
               fontFamily: "CaviarDreams-Bold",
-              fontSize: "35px",
+              fontWeight: "700",
+              fontSize: "71.4px",
             }}
           >
             Artificial Intelligence (
@@ -298,8 +299,9 @@ const YourComponent = () => {
           <Typography
             sx={{
               color: "rgba(207, 207, 207, 1)",
-              width: "60%",
+              width: "59%",
               textAlign: "justify",
+              fontSize: "23px",
             }}
           >
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -316,21 +318,23 @@ const YourComponent = () => {
         </Box>
         <Box
           sx={{
-            width: "60%",
+            width: "50%",
           }}
         >
           <Button
-            variant="contained"
             sx={{
-              background: gradientBackground,
+              background: "linear-gradient(180deg, #DB6041 0%, #BF3328 100%)",
               color: "white", // Set text color to be visible against the gradient background
               "&:hover": {
-                background: gradientBackground, // Adjust hover state if needed
+                background:
+                  "linear-gradient(180deg, #DB6041 50%, #BF3328 100%)", // Adjust hover state if needed
               },
               borderRadius: "34.33px",
+              padding: "10px 20px",
               width: "30%",
               margin: "50px auto",
               fontFamily: "CaviarDreams-Bold",
+              fontSize: "23px",
             }}
           >
             Get Started
@@ -342,4 +346,4 @@ const YourComponent = () => {
   );
 };
 
-export default YourComponent;
+export default Home;

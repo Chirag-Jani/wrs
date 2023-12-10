@@ -1,9 +1,9 @@
 .top_home {
   background-image: url("../resources/homepageBanner.jpg");
   background-size: cover;
-  background-position: center top -100px; /* Skip 100px from the top of the image */
+  background-position: center;
   height: fit-content;
-  min-height: 90vh;
+  height: calc(100vh + 100px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,7 @@
 .firstLetter {
   font-family: "CaviarDreams-Bold";
   background: linear-gradient(
-    to right,
+    to bottom,
     rgba(246, 139, 89, 1),
     rgba(169, 16, 20, 1)
   );
@@ -58,7 +58,7 @@
   font-size: 50px;
   font-family: "CaviarDreams-Bold";
   background: linear-gradient(
-    to right,
+    to bottom,
     rgba(0, 162, 213, 1),
     rgba(0, 79, 197, 1)
   );
@@ -72,7 +72,7 @@
   font-size: 50px;
   font-family: "CaviarDreams-Regular";
   background: linear-gradient(
-    to right,
+    to bottom,
     rgba(246, 139, 89, 1),
     rgba(169, 16, 20, 1)
   );
@@ -100,7 +100,7 @@
 .how_we_do_ai {
   font-family: "CaviarDreams-Bold";
   background: linear-gradient(
-    to right,
+    to bottom,
     rgba(226, 107, 71, 1),
     rgba(180, 33, 30, 1)
   );
@@ -113,7 +113,7 @@
 .wrs_hwd {
   font-family: "CaviarDreams-Bold";
   background: linear-gradient(
-    to right,
+    to bottom,
     rgba(216, 91, 62, 1),
     rgba(191, 51, 40, 1)
   );
@@ -127,5 +127,5 @@
   background-image: url("../resources/wrs_temp.png");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 110vh;
 }

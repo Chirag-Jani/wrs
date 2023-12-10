@@ -24,3 +24,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "DMSans-Regular";
+  src: local("YourFont-Regular"),
+    url("../public//fonts/DM_Sans/static/DMSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
