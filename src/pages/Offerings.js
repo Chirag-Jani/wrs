@@ -10,7 +10,7 @@ import rt_dm from "../resources/rt_dm.svg";
 import rt_web from "../resources/rt_web.svg";
 import { useLocation } from "react-router-dom";
 
-const Offerings = ({ setSelectedMenu }) => {
+const Offerings = ({ setSelectedMenu, FadeIn }) => {
   const whatWeDoInfo = [
     {
       img: rt_coach,
@@ -51,7 +51,9 @@ const Offerings = ({ setSelectedMenu }) => {
 
   return (
     <>
-      <Box className="offerings_banner"></Box>
+      <FadeIn>
+        <Box className="offerings_banner"></Box>
+      </FadeIn>
       <Box
         sx={{
           backgroundColor: "rgb(23,23,23)",
@@ -74,7 +76,6 @@ const Offerings = ({ setSelectedMenu }) => {
                 <span className="realtor_text">Realtor</span> {item.title}
               </Typography>
               <Box
-                key={index}
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",

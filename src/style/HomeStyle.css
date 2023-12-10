@@ -124,8 +124,8 @@
 }
 
 .wrs_temp {
-  background-image: url("../resources/wrs_temp.png");
+  background-image: url("../resources/temp_home.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 110vh;
+  min-height: 130vh;
 }

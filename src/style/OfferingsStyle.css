@@ -4,3 +4,6 @@
   background-position: center;
   height: calc(100vh + 100px);
 }
+.visible {
+  opacity: 1;
+}

@@ -11,7 +11,7 @@ import rt_coach from "../resources/rt_coach.svg";
 import rt_dm from "../resources/rt_dm.svg";
 import rt_web from "../resources/rt_web.svg";
 
-const Home = () => {
+const Home = ({ FadeIn }) => {
   const whatWeDoInfo = [
     {
       img: rt_coach,
@@ -40,49 +40,52 @@ const Home = () => {
   ];
   return (
     <Box>
-      <Box className="top_home">
-        <img
-          src={logo}
-          alt=""
-          style={{
-            height: "200px",
-            width: "auto",
-            margin: "10px 0",
-          }}
-        />
-        <Typography
-          variant="h4"
-          className="top_home_title"
-          sx={{ color: "white", textAlign: "center", fontSize: "70px" }}
-        >
-          <span className="firstLetter">W</span>orld{" "}
-          <span className="firstLetter">R</span>ealtor{" "}
-          <span className="firstLetter">S</span>olutions
-        </Typography>
-        <Typography
-          sx={{
-            color: "rgba(196, 196, 196, 1)",
-            textAlign: "center",
-            fontSize: "35px",
-            margin: "20px 0",
-            fontFamily: "DMSans-Regular",
-          }}
-        >
-          We're not just a real estate service provider <br /> we're your
-          partners in success. Elevate your real estate game <br /> with our
-          comprehensive
-          <span
-            className="firstLetter"
+      <FadeIn>
+        <Box className="top_home">
+          <img
+            src={logo}
+            alt=""
             style={{
+              height: "200px",
+              width: "auto",
+              margin: "10px 0",
+            }}
+          />
+          <Typography
+            variant="h4"
+            className="top_home_title"
+            sx={{ color: "white", textAlign: "center", fontSize: "70px" }}
+          >
+            <span className="firstLetter">W</span>orld{" "}
+            <span className="firstLetter">R</span>ealtor{" "}
+            <span className="firstLetter">S</span>olutions
+          </Typography>
+          <Typography
+            sx={{
+              color: "rgba(196, 196, 196, 1)",
+              textAlign: "center",
+              fontSize: "35px",
+              margin: "20px 0",
               fontFamily: "DMSans-Regular",
             }}
           >
-            {" "}
-            360° solutions{" "}
-          </span>
-          tailored for modern realtors.
-        </Typography>
-      </Box>
+            We're not just a real estate service provider <br /> we're your
+            partners in success. Elevate your real estate game <br /> with our
+            comprehensive
+            <span
+              className="firstLetter"
+              style={{
+                fontFamily: "DMSans-Regular",
+              }}
+            >
+              {" "}
+              360° solutions{" "}
+            </span>
+            tailored for modern realtors.
+          </Typography>
+        </Box>
+      </FadeIn>
+
       <Box className="what_we_do">
         <Typography
           variant="h4"
