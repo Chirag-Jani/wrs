@@ -12,14 +12,6 @@ import rt_dm from "../resources/rt_dm.svg";
 import rt_web from "../resources/rt_web.svg";
 
 const YourComponent = () => {
-  const textContainerStyle = {
-    position: "absolute",
-    top: "90%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    display: "flex",
-    flexDirection: "column",
-  };
   const gradientBackground =
     "linear-gradient(180deg, #DB6041 0%, #BF3328 100%)";
 
@@ -121,13 +113,50 @@ const YourComponent = () => {
           sx={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-between",
+            justifyContent: "space-evenly",
             alignItems: "start",
             width: "100%",
           }}
         >
+          <Box
+            sx={{
+              display: "flex",
+              width: "70%",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "40px",
+            }}
+          >
+            {whatWeDoInfo?.map((item, index) => (
+              <Box
+                key={index}
+                sx={{
+                  textAlign: "center",
+                  margin: "30px",
+                }}
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  style={{
+                    marginBottom: "15px",
+                  }}
+                />
+                <Typography
+                  sx={{
+                    margin: "auto",
+                    fontSize: "20px",
+                  }}
+                >
+                  <span className="realtor_text">Realtor</span> {item.title}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+
           {/* First Section */}
-          <Box>
+          {/* <Box>
             {whatWeDoInfo.slice(0, 3).map((item, index) => (
               <div
                 key={index}
@@ -152,10 +181,10 @@ const YourComponent = () => {
                 </Typography>
               </div>
             ))}
-          </Box>
+          </Box> */}
 
           {/* Second Section */}
-          <Box>
+          {/* <Box>
             {whatWeDoInfo.slice(3, 6).map((item, index) => (
               <div
                 key={index}
@@ -180,10 +209,16 @@ const YourComponent = () => {
                 </Typography>
               </div>
             ))}
-          </Box>
+          </Box> */}
         </Box>
         <Box>
-          <Box style={textContainerStyle}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              margin: "50px auto",
+            }}
+          >
             <p
               className="ai_powered"
               style={{

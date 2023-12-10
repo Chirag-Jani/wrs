@@ -34,13 +34,13 @@
   align-items: center;
   height: fit-content;
   background-color: rgb(209, 209, 209);
-  background-image: url("../resources/handCity.png");
+  /* background-image: url("../resources/handCity.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: fit-content;
-  position: relative;
-  background-size: 147%;
+  /* position: relative; */
+  /* background-size: 147%; */
 }
 .realtor_text {
   font-family: "CaviarDreams-Bold";
