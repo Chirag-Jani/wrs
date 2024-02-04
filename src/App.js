@@ -8,6 +8,7 @@ import Pricing from "./pages/Pricing";
 import { fadeIn } from "react-animations";
 import { keyframes, styled } from "styled-components";
 import UnderConstructionPage from "./pages/UnderConstructionPage";
+import OurServices from "./pages/OurServices";
 
 const FadeIn = styled.div`
   animation: 2s ${keyframes`${fadeIn}`};
@@ -21,6 +22,10 @@ function App() {
         <Route path="/" element={<Homepage FadeIn={FadeIn} />} />
         <Route path="/offerings" element={<Offerings FadeIn={FadeIn} />} />
         <Route path="/pricing" element={<Pricing FadeIn={FadeIn} />} />
+        <Route
+          path="/pricing/our-services"
+          element={<OurServices FadeIn={FadeIn} />}
+        />
         <Route
           path="/about-us"
           element={<UnderConstructionPage FadeIn={FadeIn} />}

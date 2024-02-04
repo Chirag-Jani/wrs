@@ -8,7 +8,7 @@ const PricingCard = ({ img, title }) => {
       <div className="pricing-img-box">
         <img src={img} alt="" />
       </div>
-      <Link to={"/"}>
+      <Link to={"our-services"}>
         <button className="pricing-cta">{title}</button>
       </Link>
     </div>
