@@ -51,3 +51,119 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
+
+/* /////////////////////////////////////////// */
+.top_home {
+  background-image: url("../resources/homepageBanner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: fit-content;
+  height: calc(100vh + 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.what_we_do {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  background-color: rgb(209, 209, 209);
+  /* background-image: url("../resources/handCity.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: fit-content;
+  /* position: relative; */
+  /* background-size: 147%; */
+}
+.realtor_text {
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to bottom,
+    rgba(246, 139, 89, 1),
+    rgba(169, 16, 20, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+}
+.ai_powered {
+  font-size: 50px;
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 162, 213, 1),
+    rgba(0, 79, 197, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+}
+
+.realtor_solutions {
+  font-size: 50px;
+  font-family: "CaviarDreams-Regular";
+  background: linear-gradient(
+    to bottom,
+    rgba(246, 139, 89, 1),
+    rgba(169, 16, 20, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  font-weight: 400;
+}
+
+.how_we_do {
+  background-image: url("../resources/aiImage.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  background-color: rgb(209, 209, 209);
+  padding: 0 50px;
+}
+
+.how_we_do_ai {
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 107, 71, 1),
+    rgba(180, 33, 30, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.wrs_hwd {
+  font-family: "CaviarDreams-Bold";
+  background: linear-gradient(
+    to bottom,
+    rgba(216, 91, 62, 1),
+    rgba(191, 51, 40, 1)
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.wrs_temp {
+  background-image: url("../resources/homepageBanner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 130vh;
+}

@@ -1,8 +1,6 @@
 import React from "react";
 // import homepageBanner from "../resources/homepageBanner.jpg";
-import homepageBanner from "../resources/TempHomepageBanner.svg";
-// import logo from "../resources/logo.svg";
-import WhatWeDo from "../resources/TempAiPowered.svg";
+import logo from "../resources/logo.svg";
 // import WhatWeDo from "../resources/handCity.png";
 import "../style/HomeStyle.css";
 import RealtorCoachingAndTraining from "../resources/RealtorCoachingAndTraining.svg";
@@ -11,7 +9,7 @@ import RealtorCallCenter from "../resources/RealtorCallCenter.svg";
 import RealtorDM from "../resources/RealtorDM.svg";
 import RealtorSMM from "../resources/RealtorSMM.svg";
 import RealtorWebDev from "../resources/RealtorWebDev.svg";
-import { Grid, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 const Homepage = ({ FadeIn }) => {
   const whatWeDoData = [
@@ -42,141 +40,251 @@ const Homepage = ({ FadeIn }) => {
   ];
 
   return (
-    <div>
-      <div>
-        {/* <div className="relative"> */}
-        <FadeIn>
+    <Box>
+      <FadeIn>
+        <Box className="top_home">
           <img
-            src={homepageBanner}
+            src={logo}
             alt=""
-            // className="absolute top-0 z-0"
             style={{
-              minHeight: "100vh",
+              height: "200px",
+              width: "auto",
+              margin: "10px 0",
             }}
           />
-          {/* <img
-            src={homepageBanner}
-            alt=""
-            className="absolute top-0 z-0"
-            style={{
-              minHeight: "100vh",
+          <Typography
+            variant="h4"
+            className="top_home_title"
+            sx={{
+              color: "white",
+              textAlign: "center",
+              fontSize: "70px",
+              fontFamily: "CaviarDreams-Bold",
             }}
-          /> */}
-        </FadeIn>
-        {/* <div className="absolute top-0 homepage-top">
-          <img src={logo} alt="" className="homepage-top-logo" />
-          <h1 className="homepage-top-header">
-            <span className="font-gradiant"> W</span>orld
-            <span className="font-gradiant"> R</span>ealtor
-            <span className="font-gradiant"> S</span>olutions
-          </h1>
-          <p className="homepage-top-desc">
+          >
+            <span className="font-gradiant">W</span>orld{" "}
+            <span className="font-gradiant">R</span>ealtor{" "}
+            <span className="font-gradiant">S</span>olutions
+          </Typography>
+          <Typography
+            sx={{
+              color: "rgba(196, 196, 196, 1)",
+              textAlign: "center",
+              fontSize: "35px",
+              margin: "20px 0",
+              fontFamily: "DMSans-Regular",
+            }}
+          >
             We're not just a real estate service provider <br /> we're your
             partners in success. Elevate your real estate game <br /> with our
             comprehensive
-            <span className="font-gradiant"> 360° solutions </span>tailored for
-            modern realtors.
-          </p>
-        </div> */}
-      </div>
-      <div className="homepage-data">
-        <img src={WhatWeDo} alt="" className="wwd-img" />
-        <Grid
-          container
-          className="wwd-data"
+            <span
+              className="font-gradiant"
+              style={{
+                fontFamily: "DMSans-Regular",
+              }}
+            >
+              {" "}
+              360° solutions{" "}
+            </span>
+            tailored for modern realtors.
+          </Typography>
+        </Box>
+      </FadeIn>
+
+      <Box className="what_we_do">
+        <Typography
+          variant="h4"
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
+            color: "rgba(30, 30, 30, 1)",
+            fontSize: "50px",
+            fontFamily: "DMSans-SemiBold",
+            paddingTop: "50px",
           }}
         >
-          <Grid
-            item
-            xs={12}
-            md={4}
+          <span className="font-gradiant">W</span>
+          hat we do?{" "}
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-evenly",
+            alignItems: "start",
+            width: "100%",
+          }}
+        >
+          <Box
             sx={{
               display: "flex",
-              justifyContent: "space-around",
-              flexDirection: "column",
+              width: "100%",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "end",
+              margin: "40px",
             }}
           >
-            {whatWeDoData.slice(0, 3).map((item, id) => (
-              <Grid
-                key={id}
-                item
+            {whatWeDoData?.map((item, index) => (
+              <Box
+                key={index}
                 sx={{
-                  width: "80%",
-                  margin: "10px auto",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
+                  textAlign: "center",
+                  margin: "30px",
+                  width: "300px",
                 }}
               >
                 <img
                   src={item.image}
-                  alt=""
+                  alt={item.title}
                   style={{
-                    width: "60%",
+                    marginBottom: "15px",
                   }}
                 />
                 <Typography
                   sx={{
-                    margin: "10px auto",
-                    fontSize: "20px",
                     fontFamily: "DMSans-Medium",
+                    margin: "auto",
+                    fontSize: "20px",
                   }}
                 >
-                  <span className="font-gradiant">Realtor </span>
-                  {item.title}
+                  <span className="font-gradiant">Realtor</span> {item.title}
                 </Typography>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
-          {/* <Grid md={4}></Grid> */}
-          <Grid
-            item
-            xs={12}
-            md={4}
+          </Box>
+        </Box>
+        <Box>
+          <Box
             sx={{
               display: "flex",
-              justifyContent: "space-around",
               flexDirection: "column",
+              margin: "50px auto",
             }}
           >
-            {whatWeDoData.slice(3, 6).map((item, id) => (
-              <Grid
-                key={id}
-                item
-                sx={{
-                  width: "80%",
-                  margin: "8px auto",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <img
-                  src={item.image}
-                  alt=""
-                  style={{
-                    width: "60%",
-                  }}
-                />
-                <Typography
-                  sx={{
-                    margin: "10px auto",
-                    fontSize: "20px",
-                    fontFamily: "DMSans-Medium",
-                  }}
-                >
-                  <span className="font-gradiant">Realtor </span>
-                  {item.title}
-                </Typography>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-      </div>
-    </div>
+            <p
+              className="ai_powered"
+              style={{
+                margin: 0,
+              }}
+            >
+              AI Powered
+            </p>
+            <p
+              className="realtor_solutions"
+              style={{
+                margin: 0,
+              }}
+            >
+              Realtor Solutions
+            </p>
+          </Box>
+        </Box>
+      </Box>
+      <Box className="how_we_do">
+        <Typography
+          variant="h4"
+          sx={{
+            fontSize: "70px",
+            fontFamily: "DMSans-Regular",
+            fontWeight: "700",
+            marginTop: "50px",
+            color: "rgba(255, 255, 255, 1)",
+          }}
+        >
+          <span
+            className="firstLetter"
+            style={{
+              fontFamily: "DMSans-Regular",
+              fontWeight: "bold",
+            }}
+          >
+            H
+          </span>
+          ow we do?{" "}
+        </Typography>
+        <Box
+          sx={{
+            textAlign: "left",
+            fontFamily: "DMSans-Regular",
+            fontWeight: "500",
+            width: "100%",
+            margin: "70px",
+          }}
+        >
+          <Typography
+            sx={{
+              color: "rgba(207, 207, 207, 1)",
+              fontSize: "33px",
+            }}
+          >
+            Simple, With Cutting edge Technology known as
+          </Typography>
+          <Typography
+            className="how_we_do_ai"
+            sx={{
+              fontFamily: "CaviarDreams-Bold",
+              fontWeight: "700",
+              fontSize: "71.4px",
+            }}
+          >
+            Artificial Intelligence (
+            <span
+              style={{
+                color: "white",
+              }}
+            >
+              AI
+            </span>
+            )
+          </Typography>
+        </Box>
+        <Box>
+          <Typography
+            sx={{
+              color: "rgba(207, 207, 207, 1)",
+              width: "59%",
+              textAlign: "justify",
+              fontSize: "23px",
+            }}
+          >
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Welcome to <span className="wrs_hwd">World Realtor Solutions</span>,
+            where success is personalized and powered by cutting-edge AI
+            technology. From expert training to AI-driven social media mastery,
+            branding, and call center excellence, we've got your real estate
+            journey covered. Elevate your online presence with predictive
+            analytics, stand out with a unique brand sculpted by AI insights,
+            and ensure every client interaction is top-notch. Ready to redefine
+            real estate success with the fusion of expertise and AI innovation ?
+            Let's get started.
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            width: "50%",
+          }}
+        >
+          <Button
+            sx={{
+              background: "linear-gradient(180deg, #DB6041 0%, #BF3328 100%)",
+              color: "white", // Set text color to be visible against the gradient background
+              "&:hover": {
+                background:
+                  "linear-gradient(180deg, #DB6041 50%, #BF3328 100%)", // Adjust hover state if needed
+              },
+              borderRadius: "34.33px",
+              padding: "10px 20px",
+              width: "30%",
+              margin: "50px auto",
+              fontFamily: "DMSans-SemiBold",
+              fontSize: "23px",
+            }}
+          >
+            Get Started
+          </Button>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 
