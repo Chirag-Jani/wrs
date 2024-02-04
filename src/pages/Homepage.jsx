@@ -100,6 +100,7 @@ const Homepage = ({ FadeIn }) => {
             fontSize: "50px",
             fontFamily: "DMSans-SemiBold",
             paddingTop: "50px",
+            textAlign: "center",
           }}
         >
           <span className="font-gradiant">W</span>
@@ -130,7 +131,7 @@ const Homepage = ({ FadeIn }) => {
                 sx={{
                   textAlign: "center",
                   margin: "30px",
-                  width: "300px",
+                  width: "350px",
                 }}
               >
                 <img

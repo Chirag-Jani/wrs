@@ -8,6 +8,10 @@ const Navbar = () => {
 
   const navItems = [
     {
+      label: "Home",
+      path: "/",
+    },
+    {
       label: "About Us",
       path: "/about-us",
     },
@@ -54,7 +58,7 @@ const Navbar = () => {
                   style={{
                     backgroundImage:
                       active === item.path
-                        ? "linear-gradient(to bottom, #01A2D5, #0178CD)"
+                        ? "linear-gradient(to bottom,rgba(1, 162, 213, 1),rgba(1, 108, 203, 1))"
                         : "",
                   }}
                 >
