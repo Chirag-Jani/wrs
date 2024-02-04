@@ -1,9 +1,0 @@
-.offerings_banner {
-  background-image: url("../resources/offerings_top.jpg");
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh + 100px);
-}
-.visible {
-  opacity: 1;
-}

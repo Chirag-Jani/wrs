@@ -1,34 +1,45 @@
 @font-face {
   font-family: "CaviarDreams-Regular";
-  src: local("YourFont-Regular"), url("../public//fonts/CaviarDreams.ttf");
+  src: url("../public//fonts/CaviarDreams.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CaviarDreams-Bold";
-  src: local("YourFont-Regular"), url("../public//fonts/CaviarDreams_Bold.ttf");
+  src: url("../public//fonts/CaviarDreams_Bold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CaviarDreams-BoldItalic";
-  src: local("YourFont-Regular"),
-    url("../public//fonts/CaviarDreams_BoldItalic.ttf");
+  src: url("../public//fonts/CaviarDreams_BoldItalic.ttf");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "CaviarDreams-Italic";
-  src: local("YourFont-Regular"),
-    url("../public//fonts/CaviarDreams_Italic.ttf");
+  src: url("../public//fonts/CaviarDreams_Italic.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DMSans-Regular";
-  src: local("YourFont-Regular"),
-    url("../public//fonts/DM_Sans/static/DMSans-Regular.ttf");
+  src: url("../public//fonts/DM_Sans/static/DMSans-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans-Medium";
+  src: url("../public//fonts/DM_Sans/static/DMSans-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans-SemiBold";
+  src: url("../public//fonts/DM_Sans/static/DMSans-SemiBold.ttf");
   font-weight: normal;
   font-style: normal;
 }

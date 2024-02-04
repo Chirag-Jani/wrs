@@ -1,0 +1,11 @@
+.pricing-cards {
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+}

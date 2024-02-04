@@ -1,0 +1,32 @@
+.PricingCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-img-box {
+  border-radius: 44px;
+  width: -moz-fit-content;
+  width: 400px;
+  height: 400px;
+  padding: 30px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d9d9d9;
+}
+
+.pricing-cta {
+  background-image: linear-gradient(to bottom, #f58958, #ab1316);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  border-radius: 42px;
+  width: 400px;
+  padding: 20px;
+  font-family: "DMSans-SemiBold";
+  font-size: 22px;
+  text-transform: capitalize;
+}

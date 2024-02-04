@@ -1,77 +1,71 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import logo from "../resources/logo.svg";
+import { Link, useLocation } from "react-router-dom";
 import "../style/NavbarStyle.css";
-import { Box } from "@mui/material";
-import { Link } from "react-router-dom";
 
-const Navbar = ({ selectedMenu, setSelectedMenu }) => {
-  const [isTransparent, setIsTransparent] = useState(true);
+const Navbar = () => {
+  const [active, setActive] = React.useState("/");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollThreshold = 50;
-      const shouldSetTransparent = window.scrollY < scrollThreshold;
-      setIsTransparent(shouldSetTransparent);
-    };
+  const navItems = [
+    {
+      label: "About Us",
+      path: "/about-us",
+    },
+    {
+      label: "Offerings",
+      path: "/offerings",
+    },
+    {
+      label: "Pricing",
+      path: "/pricing",
+    },
+    {
+      label: "Appointments",
+      path: "/appointments",
+    },
+    {
+      label: "Contact Us",
+      path: "/contact-us",
+    },
+  ];
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  let location = useLocation();
+  React.useEffect(() => {
+    setActive(location.pathname);
+  }, [location.pathname]);
 
   return (
-    <Box
-      className={`nav ${isTransparent ? "transparent" : ""}`}
-      style={{
-        backgroundImage: isTransparent
-          ? 'url("../resources/homepageBanner.jpg")'
-          : "none",
-      }}
-    >
-      <Box>
-        <Link
-          to={"/"}
-          onClick={() => {
-            setSelectedMenu("/");
-          }}
-        >
-          <img
-            src={logo}
-            alt="WRS"
-            style={{
-              height: "60px",
-              width: "auto",
-              margin: "0 30px",
-              cursor: "pointer",
-            }}
-          />
-        </Link>
-      </Box>
-      <Box className="nav_elements">
-        <Link className={`ele ${selectedMenu === "/about-us" ? "active" : ""}`}>
-          About us
-        </Link>
-        <Link
-          to={"/offerings"}
-          className={`ele ${selectedMenu === "/offerings" ? "active" : ""}`}
-          onClick={() => {
-            setSelectedMenu("/offerings");
-          }}
-        >
-          Offerings
-        </Link>
-        <Link className={`ele ${selectedMenu === "/pricing" ? "active" : ""}`}>
-          Pricing
-        </Link>
-        <Link
-          className={`ele ${selectedMenu === "/contact-us" ? "active" : ""}`}
-        >
-          Contact us
-        </Link>
-      </Box>
-    </Box>
+    <div className="relative">
+      <div className="bg-transparent absolute z-10 navbar">
+        <div className="navbar div py-4 px-5 font-bold tracking-wider">
+          <Link to="/" className="m-4">
+            <img src={logo} alt="" className="w-14 mx-4 p-0" />
+          </Link>
+          <div className="mx-4 navbar-items">
+            {navItems?.map((item, index) => {
+              return (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className="nav-item mx-4 text-transparent bg-clip-text bg-gradient-to-b from-[#F68C59] to-[#A80F14] text-xl "
+                  onClick={() => {
+                    setActive(item.path);
+                  }}
+                  style={{
+                    backgroundImage:
+                      active === item.path
+                        ? "linear-gradient(to bottom, #01A2D5, #0178CD)"
+                        : "",
+                  }}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

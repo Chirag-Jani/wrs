@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./layout/Navbar";
-import Home from "./pages/Home";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Homepage from "./pages/Homepage";
 import Offerings from "./pages/Offerings";
+import Pricing from "./pages/Pricing";
+
 import { fadeIn } from "react-animations";
 import { keyframes, styled } from "styled-components";
 
@@ -12,24 +13,15 @@ const FadeIn = styled.div`
 `;
 
 function App() {
-  const [selectedMenu, setSelectedMenu] = useState();
   return (
-    <Router>
-      <Navbar selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu} />
+    <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home FadeIn={FadeIn} />} />
-        <Route
-          path="/offerings"
-          element={
-            <Offerings
-              FadeIn={FadeIn}
-              selectedMenu={selectedMenu}
-              setSelectedMenu={setSelectedMenu}
-            />
-          }
-        />
+        <Route path="/" element={<Homepage FadeIn={FadeIn} />} />
+        <Route path="/offerings" element={<Offerings FadeIn={FadeIn} />} />
+        <Route path="/pricing" element={<Pricing FadeIn={FadeIn} />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
