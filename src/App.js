@@ -9,6 +9,7 @@ import { fadeIn } from "react-animations";
 import { keyframes, styled } from "styled-components";
 import UnderConstructionPage from "./pages/UnderConstructionPage";
 import OurServices from "./pages/OurServices";
+import Footer from "./layout/Footer";
 
 const FadeIn = styled.div`
   animation: 2s ${keyframes`${fadeIn}`};
@@ -39,6 +40,7 @@ function App() {
           element={<UnderConstructionPage FadeIn={FadeIn} />}
         />
       </Routes>
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

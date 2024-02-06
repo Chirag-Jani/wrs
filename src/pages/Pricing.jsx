@@ -1,5 +1,5 @@
 import React from "react";
-// import pricingBanner from "../resources/PricingBanner.png";
+import pricingBanner from "../resources/PricingBanner.jpg";
 import RealtorCoachingAndTraining from "../resources/RealtorCoachingAndTraining.svg";
 import RealtorBranding from "../resources/RealtorBranding.svg";
 import RealtorCallCenter from "../resources/RealtorCallCenter.svg";
@@ -44,15 +44,14 @@ const Pricing = ({ FadeIn }) => {
       }}
     >
       <FadeIn>
-        {/* <img
+        <img
           src={pricingBanner}
           alt=""
           className="absolute top-0"
           style={{
             width: "100%",
           }}
-        /> */}
-        <div className="top-img"></div>
+        />
       </FadeIn>
       <div className="pricing-cards">
         {pricings?.map((item, idx) => {

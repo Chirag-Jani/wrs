@@ -43,3 +43,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "DMSans-SemiBoldItalic";
+  src: url("../public//fonts/DM_Sans/static/DMSans-SemiBoldItalic.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,5 +1,5 @@
 .top-img {
-  background-image: url("../resources/PricingBanner.png");
+  background-image: url("../resources/PricingBanner.jpg");
   background-size: cover;
   background-position: center;
   height: calc(100vh + 100px);
@@ -7,15 +7,15 @@
 }
 
 .pricing-cards {
-  /* background-color: #1e1e1e; */
+  background-color: #1e1e1e;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  /* position: absolute;
+  position: absolute;
   top: 100%;
-  left: 0%; */
+  left: 0%;
 }
 
 /* .services-img {
