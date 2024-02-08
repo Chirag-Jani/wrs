@@ -38,6 +38,13 @@
 }
 
 @font-face {
+  font-family: "DMSans-Italic";
+  src: url("../public//fonts/DM_Sans/static/DMSans-Italic.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "DMSans-SemiBold";
   src: url("../public//fonts/DM_Sans/static/DMSans-SemiBold.ttf");
   font-weight: normal;

@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <div className="bg-transparent absolute z-10 navbar">
+      <div className="bg-transparent z-10 navbar fixed top-0">
         <div className="navbar div py-4 px-5 font-bold tracking-wider">
           <Link to="/" className="m-4">
             <img src={logo} alt="" className="w-14 mx-4 p-0" />

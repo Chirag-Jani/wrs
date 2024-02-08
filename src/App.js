@@ -9,7 +9,8 @@ import { fadeIn } from "react-animations";
 import { keyframes, styled } from "styled-components";
 import UnderConstructionPage from "./pages/UnderConstructionPage";
 import OurServices from "./pages/OurServices";
-import Footer from "./layout/Footer";
+// import Footer from "./layout/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const FadeIn = styled.div`
   animation: 2s ${keyframes`${fadeIn}`};
@@ -18,6 +19,7 @@ const FadeIn = styled.div`
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage FadeIn={FadeIn} />} />
