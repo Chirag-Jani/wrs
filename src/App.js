@@ -11,6 +11,7 @@ import UnderConstructionPage from "./pages/UnderConstructionPage";
 import OurServices from "./pages/OurServices";
 // import Footer from "./layout/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import AboutUs from "./pages/AboutUs";
 
 const FadeIn = styled.div`
   animation: 2s ${keyframes`${fadeIn}`};
@@ -29,10 +30,7 @@ function App() {
           path="/pricing/our-services"
           element={<OurServices FadeIn={FadeIn} />}
         />
-        <Route
-          path="/about-us"
-          element={<UnderConstructionPage FadeIn={FadeIn} />}
-        />
+        <Route path="/about-us" element={<AboutUs FadeIn={FadeIn} />} />
         <Route
           path="/appointments"
           element={<UnderConstructionPage FadeIn={FadeIn} />}
